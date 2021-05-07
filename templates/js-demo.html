@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.css"
+    />
+    <title>To Dos</title>
+  </head>
+    <script>
+        console.log('starting request') // 1st
+        fetch('https://dog.ceo/api/breeds/image/random')
+            .then(response => { // callback function. It will be called with the return value that the Promise resolves with
+                return response.json()
+            }).then(parsedJsonBody => {
+                console.log(parsedJsonBody)
+             })
+            .catch(error => { // this will be called if the Promise is rejected
+                console.error(`There was an error: ${error.message}`) // if the promise is rejected this will happen 3rd
+            }) // returns a Promise
+        console.log('finished') // 2nd
+    </script>
+  <body>
+    <div class="container">
+      <h1>To Do List</h1>
+    </div>
+  </body>
+</html>

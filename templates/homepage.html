@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.css"
+    />
+    <title>To Dos</title>
+  </head>
+  <body>
+    <div class="container">
+      <button id="get-todo-list">Get To Do List</button>
+      {#
+         {% for item in to_do_list %}
+            <div>{{item['title']}}</div>
+          {% endfor %}
+      #}
+    </div>
+  </body>
+  <script src="static/todo.js"></script>
+</html>
