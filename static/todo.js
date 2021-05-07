@@ -12,4 +12,4 @@ document.getElementById("get-todo-list").addEventListener("click", () => {
         // remove loading bar to the page
     });
 });
-// Axios - JS library that is a wrapper to parse
+// Axios - JS library that is a wrapper to fetch
